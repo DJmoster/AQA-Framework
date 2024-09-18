@@ -13,9 +13,14 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
         <mapping class="sviat.dev.task6.dao.Meeting"/>
         <mapping class="sviat.dev.task6.dao.Participant"/>
+
+        <mapping class="sviat.dev.task7.dao.Person"/>
+        <mapping class="sviat.dev.task7.dao.Address"/>
+        <mapping class="sviat.dev.task7.dao.Order"/>
+        <mapping class="sviat.dev.task7.dao.Product"/>
     </session-factory>
 </hibernate-configuration>
