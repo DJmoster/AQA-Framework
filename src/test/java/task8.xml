@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test suite for Task2 methods" verbose="1">
+
+    <test name="Simple Test">
+        <classes>
+            <class name="task8.TestForTask2">
+                <methods>
+                    <include name="testConcatenateStringsUsingPlus" />
+                    <include name="testConcatenateStringsUsingConcatFunction" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Data Provider Test">
+        <classes>
+            <class name="task8.TestForTask2">
+                <methods>
+                    <include name="testConcatenateStringsUsingPlusWithProvider" />
+                    <include name="testConcatenateStringsUsingConcatFunctionWithProvider" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Parameters Test">
+        <parameter name="a" value="World " />
+        <parameter name="b" value="Hello!" />
+        <parameter name="expected" value="World Hello!" />
+        <classes>
+            <class name="task8.TestForTask2">
+                <methods>
+                    <include name="testConcatenateStringsUsingPlusWithParameters" />
+                    <include name="testConcatenateStringsUsingConcatFunctionWithParameters" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
