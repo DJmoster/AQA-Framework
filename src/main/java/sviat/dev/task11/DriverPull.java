@@ -25,7 +25,7 @@ public class DriverPull {
 
     public static WebDriverWait getWait() {
         if (wait == null) {
-            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         }
         return wait;
     }
