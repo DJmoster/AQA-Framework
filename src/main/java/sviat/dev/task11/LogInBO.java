@@ -56,7 +56,4 @@ public class LogInBO {
         return this;
     }
 
-    public void closeDriver() {
-        getDriver().quit();
-    }
 }

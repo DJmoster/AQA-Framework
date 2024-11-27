@@ -1,5 +1,6 @@
 package sviat.dev.task11;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +15,7 @@ public class DriverPull {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+            WebDriverManager.getInstance().setup();
 
             driver = new ChromeDriver();
             driver.manage().window().maximize();

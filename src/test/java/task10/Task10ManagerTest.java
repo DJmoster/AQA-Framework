@@ -10,10 +10,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import sviat.dev.task13.MyExecutionListener;
+import sviat.dev.task13.MyTestListener;
 
 import java.time.Duration;
 
+import static sviat.dev.task11.DriverPull.getDriver;
+
+@Listeners({MyTestListener.class, MyExecutionListener.class})
 public class Task10ManagerTest {
     private WebDriver driver;
 
@@ -24,13 +30,7 @@ public class Task10ManagerTest {
 
     @BeforeClass
     public void setup() {
-        ChromeDriverManager.getInstance().setup();
-        driver = new ChromeDriver();
-    }
-
-    @AfterClass
-    public void teardown() {
-        driver.quit();
+        driver = getDriver();
     }
 
     @Test

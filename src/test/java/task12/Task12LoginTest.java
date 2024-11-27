@@ -18,8 +18,7 @@ public class Task12LoginTest {
                 .fillUserCredentials()
                 .submitLogin()
                 .checkIfUserAuthorised()
-                .logOut()
-                .closeDriver();
+                .logOut();
     }
 
     @Test(description = "Login modal test suite")
@@ -29,7 +28,6 @@ public class Task12LoginTest {
                 .openLoginModal()
                 .fillUserCredentials()
                 .checkIfUserAuthorised()
-                .logOut()
-                .closeDriver();
+                .logOut();
     }
 }

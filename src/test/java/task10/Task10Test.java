@@ -1,17 +1,17 @@
 package task10;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static sviat.dev.task11.DriverPull.getDriver;
 
 public class Task10Test {
     private WebDriver driver;
 
     @BeforeTest
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = getDriver();
     }
 
     @Test
